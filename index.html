@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title> NOPANINOS Preschool Website - Modern & Vibrant</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+<style>
+  /* Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fffaf0;
+    color: #222;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background: #084b8a; /* solid bright blue */
+    color: white;
+    box-shadow: 0 4px 12px rgba(2, 49, 77, 0.7);
+    z-index: 1000;
+    user-select: none;
+  }
+  .container-flex {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 100%;
+  }
+  nav{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    cursor: pointer;
+    text-shadow: 1px 1px 6px rgba(91, 212, 10, 0.85);
+  }
+  .logo img {
+    
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.4));
+  }
+  nav.nav-links a {
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    user-select: none;
+    display: flex;
+    align-items: center;
+    height: 40px;
+  }
+  nav.nav-links a:hover,
+  nav.nav-links a:focus-visible {
+    background-color: #fdd835;
+    color: #084b8a;
+    border-color: #fbc02d;
+    outline: none;
+    box-shadow: 0 4px 15px rgba(251,192,45,0.8);
+  }
+
+  /* Hamburger menu */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+  }
+  .hamburger div {
+    width: 26px;
+    height: 4px;
+    background: white;
+    border-radius: 3px;
+  }
+
+  /* Main sections */
+  main > section {
+    width: 100%;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: #fdd835;
+    background-image: url(/image/jty.png)
+    
+    
+  }
+  .hero .container {
+    max-width: 1150px;
+  }
+  .hero h1, .hero p {
+    cursor: pointer;
+  }
+  .hero h1 {
+    font-size: 3.8rem;
+    margin-bottom: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.12));
+    transition: color 0.3s ease;
+  }
+  .hero h1:hover,
+  .hero h1:focus-visible {
+    color: #013f6b;
+    outline-offset: 4px;
+    outline: 3px solid #013f6b;
+    outline-radius: 8px;
+  }
+  .hero p {
+    font-size: 1.3rem;
+    max-width: 680px;
+    margin: 0 auto 2.4rem;
+    font-weight: 600;
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.1));
+    transition: color 0.3s ease;
+  }
+  .hero p:hover,
+  .hero p:focus-visible {
+    color: #365e93;
+    outline-offset: 3px;
+    outline: 2px solid #365e93;
+    outline-radius: 6px;
+  }
+  .hero button {
+    background: #084b8a;
+    border: none;
+    color: #fdd835;
+    padding: 1.1rem 3.2rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(8,75,138,0.75);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+  }
+  .hero button:hover,
+  .hero button:focus-visible {
+    background-color: #013f6b;
+    transform: scale(1.08);
+    box-shadow: 0 10px 30px rgba(1,63,107,0.95);
+    outline: none;
+  }
+  .hero-image {
+    margin-top: 3.2rem;
+    border-radius: 22px;
+    box-shadow: 0 16px 48px rgba(3,169,244,0.45);
+    max-width: 1150px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+  }
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 22px;
+    user-select: none;
+  }
+
+  /* About Section */
+  .about {
+    background-image: url(/image/gders.png);
+  }
+  .about .container {
+    max-width: 1000px;
+    text-align: center;
+  }
+  .about h2 {
+    color: #ffffff;
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-shadow: 1px 1px 3px rgba(2,119,189,0.45);
+  }
+  .about p {
+    font-size: 1.2rem;
+    max-width: 720px;
+    margin: 12px auto 0;
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1.65;
+  }
+  .about-image {
+    margin-top: 3rem;
+    border-radius: 22px;
+    box-shadow: 0 12px 36px rgba(251,192,45,0.5);
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Programmes Section */
+  .programmes {
+    background-image: url(/image/gj.png); /* subtle light blue */
+  }
+  .programmes .container {
+    max-width: 1130px;
+  }
+  .programmes h2 {
+    color: #084b8a;
+    font-weight: 800;
+    font-size: 3rem;
+    margin-bottom: 3.5rem;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(2,119,189,0.5);
+    letter-spacing: 1.1px;
+  }
+  
+  /* Proper grid layout for programmes */
+  .programme-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-items: center;
+  }
+  /* Responsive grid for tablets and smaller */
+  @media (max-width: 1024px) {
+    .programme-list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+  }
+  @media (max-width: 640px) {
+    .programme-list {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+  .programme-item {
+    width: 100%;
+    max-width: 280px;
+    background: white;
+    border-radius: 28px;
+    color: #0277bd;
+    box-shadow: 0 10px 32px rgba(2,119,189,0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 3px solid transparent;
+    user-select: none;
+  }
+  .programme-item:hover,
+  .programme-item:focus-visible {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 46px rgba(2,119,189,0.35);
+    border-color: #fdd835;
+    outline: none;
+  }
+  .programme-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 28px 28px 0 0;
+    user-select: none;
+  }
+  .programme-item h3 {
+    margin: 1.3rem 0 0.75rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: 0.6px;
+  }
+  .programme-item p {
+    padding: 0 1.5rem 2rem;
+    font-weight: 600;
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+
+  /* Testimonials Section */
+  .testimonials {
+    background-image: url(/image/ahyk.png);
+    padding: 5rem 1rem;
+  }
+  .testimonials .container {
+    max-width: 900px;
+  }
+  .testimonials h2 {
+    color: #084b8a;
+    font-weight: 800;
+    font-size: 3rem;
+    margin-bottom: 3.5rem;
+    text-align: center;
+    text-shadow: 1px 1px 8px rgba(2,119,189,0.9);
+    letter-spacing: 1.3px;
+  }
+  .testimonial-slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    box-shadow: 0 12px 40px rgba(2,119,189,0.4);
+  }
+  .testimonial-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .testimonial {
+    min-width: 100%;
+    padding: 3rem 2.5rem 3.5rem;
+    box-sizing: border-box;
+    position: relative;
+    background: #084b8a;
+    border-radius: 28px;
+    color: #d8c8ff;
+    font-style: italic;
+    user-select: none;
+    box-shadow: 0 12px 48px rgba(251,192,45,0.7);
+  }
+  .testimonial p {
+    margin: 0 0 1.8rem 0;
+    font-size: 1.4rem;
+    line-height: 1.75;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+  }
+  .testimonial cite {
+    display: block;
+    font-weight: 700;
+    font-style: normal;
+    text-align: right;
+    font-size: 1.15rem;
+  }
+  .testimonial-nav {
+    text-align: center;
+    margin-top: 1.7rem;
+  }
+  .testimonial-nav button {
+    background: #7a837c;
+    border: none;
+    color: #0277bd;
+    font-weight: 700;
+    padding: 0.65rem 1.6rem;
+    margin: 0 0.5rem;
+    border-radius: 28px;
+    cursor: pointer;
+    font-size: 1.05rem;
+    box-shadow: 0 6px 18px rgba(5, 20, 151, 0.7);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .testimonial-nav button:hover,
+  .testimonial-nav button:focus-visible {
+    background-color: #0277bd;
+    color: #260b66;
+    outline: none;
+  }
+
+  /* Contact Section */
+  .contact {
+    padding: 5rem 1rem;
+    background-image: url(/image/mhv.png);
+  }
+  .contact .container {
+    max-width: 720px;
+  }
+  .contact h2 {
+    color: #084b8a;
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 1.2px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+  label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #405a80;
+  }
+  input, textarea {
+    border: 2px solid #fdd835;
+    border-radius: 16px;
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: vertical;
+    box-shadow: inset 0 1px 4px rgba(0,0,0,0.05);
+    color: #212121;
+  }
+  input::placeholder, textarea::placeholder {
+    color: #999;
+    font-style: italic;
+  }
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: #0277bd;
+    box-shadow: 0 0 14px rgba(2,119,189,0.75);
+  }
+  button[type="submit"] {
+    background: #084b8a;
+    padding: 1.2rem;
+    font-weight: 800;
+    color: #fdd835;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 6px 22px rgba(8,75,138,0.85);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  button[type="submit"]:hover,
+  button[type="submit"]:focus-visible {
+    background: #015a9c;
+    box-shadow: 0 10px 30px rgba(1,63,107,1);
+    outline: none;
+  }
+
+  /* FAQ Section */
+  .faq {
+    background-image: url(/image/aaacd.png);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .faq .container {
+    max-width: 900px;
+  }
+  .faq h2 {
+    color: #084b8a;
+    font-weight: 800;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    letter-spacing: 1.3px;
+  }
+  .faq-item {
+    background: white;
+    border-radius: 24px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(3,169,244,0.15);
+    user-select: none;
+  }
+  .faq-item button {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 1.4rem 2.5rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #0277bd;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    user-select: none;
+  }
+  .faq-item button:hover,
+  .faq-item button:focus-visible {
+    background-color: #0277bd;
+    color: #fdd835;
+    outline: none;
+  }
+  .faq-icon {
+    font-family: 'Material Icons';
+    font-size: 34px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    user-select: none;
+  }
+  .faq-item.expanded .faq-icon {
+    transform: rotate(45deg);
+  }
+  .faq-content {
+    background: #f1f8ff;
+    padding: 1.5rem 3.5rem 2.5rem;
+    color: #174b8a;
+    font-size: 1.2rem;
+    line-height: 1.65;
+    display: none;
+  }
+  .faq-item.expanded .faq-content {
+    display: block;
+  }
+
+  /* Footer */
+  footer {
+    background: #013f6b;
+    color: #fdd835;
+    padding: 1.6rem 1rem;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    user-select: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .hero h1 {
+      font-size: 3rem;
+    }
+    .hero p {
+      font-size: 1.15rem;
+    }
+    .programme-list {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      display: grid;
+      gap: 2rem;
+    }
+  }
+  @media (max-width: 640px) {
+    nav.nav-links {
+      display: none;
+    }
+    .hamburger {
+      display: flex;
+    }
+    .hero h1 {
+      font-size: 2.3rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+    .testimonial-nav button {
+      padding: 0.5rem 1rem;
+      margin: 0 0.2rem;
+    }
+  }
+</style>
+</head>
+
+<body>
+<header>
+  <div class="container-flex">
+    <div class="logo" tabindex="0" role="link" aria-label="Navigate to home section" onclick="scrollToSection('hero')" onkeypress="if(event.key==='Enter') scrollToSection('hero')">
+      <img src="image/NOPANINOS HOARDING DESIGN (1920 x 1080 px).png" alt="">
+      Play - School
+    </div>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#hero" tabindex="0" aria-label="Go to Home">Home</a>
+      <a href="#about" tabindex="0">About</a>
+      <a href="#programmes" tabindex="0">Programmes</a>
+      <a href="#testimonials" tabindex="0">Testimonials</a>
+      <a href="#contact" tabindex="0">Contact</a>
+      <a href="#faq" tabindex="0">FAQ</a>
+    </nav>
+    <div class="hamburger" aria-label="Toggle navigation menu" tabindex="0" role="button" aria-pressed="false" aria-controls="mobile-menu"
+      onclick="toggleMenu()" onkeypress="if(event.key==='Enter') toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <nav id="mobile-menu" class="nav-links" style="display:none;flex-direction: column; background:#0277bd; padding: 1rem;">
+    <a href="#hero" onclick="toggleMenu()" tabindex="0" aria-label="Go to Home">Home</a>
+    <a href="#about" onclick="toggleMenu()" tabindex="0">About</a>
+    <a href="#programmes" onclick="toggleMenu()" tabindex="0">Programmes</a>
+    <a href="#testimonials" onclick="toggleMenu()" tabindex="0">Testimonials</a>
+    <a href="#contact" onclick="toggleMenu()" tabindex="0">Contact</a>
+    <a href="#faq" onclick="toggleMenu()" tabindex="0">FAQ</a>
+  </nav>
+</header>
+
+<main>
+  <section id="hero" class="hero" tabindex="-1" aria-label="Welcome section">
+    <div class="container">
+      <h1 tabindex="0" role="link" aria-label="Welcome to Kangaroo Kids - Click to explore programmes" onclick="scrollToSection('programmes')" onkeypress="if(event.key==='Enter') scrollToSection('programmes')">Welcome to Nopaninos Preschool</h1>
+      <p tabindex="0" role="link" aria-label="Start your child's journey - Click here to explore programmes" onclick="scrollToSection('programmes')" onkeypress="if(event.key==='Enter') scrollToSection('programmes')">
+        Your child’s journey to joyful learning and discovery starts here. Safe, fun, and nurturing environment tailored for your little one.
+      </p>
+      <button onclick="scrollToSection('programmes')" aria-label="Explore our programmes">Explore Programmes</button>
+      <div class="hero-image" style="margin-top: 2rem;">
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about" tabindex="-1" aria-label="About Kangaroo Kids Preschool">
+    <div class="container">
+      <h2>About Nopaninos</h2>
+      <p>We focus on creating a safe and stimulating environment where children aged 2 to 6 grow through play, exploration, and guided learning. Our experienced educators inspire creativity and build strong foundations for lifelong learning.</p>
+      <div class="about-image" style="margin-top: 2rem;">
+        <img src= "/image/jyf.png">
+      </div>
+    </div>
+  </section>
+
+  <section id="programmes" class="programmes" tabindex="-1" aria-label="Programmes offered">
+    <div class="container">
+      <h2>Our Programmes</h2>
+      <div class="programme-list">
+        <div class="programme-item" tabindex="0" aria-label="Play Group for toddlers aged 2 to 3 years">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7a29fbd3-5d46-4a27-b39e-1a90d2f77f87.png" alt="Children in Play Group interacting and learning" />
+          <h3>Play Group</h3>
+          <p>Engaging toddlers aged 2-3 with fun learning and play activities for early development.</p>
+        </div>
+        <div class="programme-item" tabindex="0" aria-label="Nursery program for children aged 3 to 4 years">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b98188c8-b558-4e0a-b348-69d275f20748.png" alt="Children in Nursery class participating in group activities" />
+          <h3>Nursery</h3>
+          <p>Stimulating early childhood development with creative programs for ages 3-4 years.</p>
+        </div>
+        <div class="programme-item" tabindex="0" aria-label="Junior KG for children aged 4 to 5 years">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/81fdc92d-739d-4494-8f78-ed41d8f4addd.png" alt="Junior KG children learning and playing" />
+          <h3>Lower KG</h3>
+          <p>Preparing children aged 4-5 with foundational skills to excel in Senior KG.</p>
+        </div>
+        <div class="programme-item" tabindex="0" aria-label="Senior KG for children aged 5 to 6 years">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bd23bcb8-8840-43b0-b205-9cd5b68bfe93.png" alt="Senior KG children engaged in literacy and numeracy activities" />
+          <h3>Upper KG</h3>
+          <p>Building strong literacy and numeracy foundations for ages 5-6 to prepare for formal schooling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials" tabindex="-1" aria-label="What parents say about us">
+    <div class="container">
+      <h2>Testimonials</h2>
+      <div class="testimonial-slider" aria-live="polite" aria-atomic="true">
+        <div class="testimonial-wrapper" id="testimonialWrapper" style="transform: translateX(0); display: flex; transition: transform 0.5s ease;">
+          <article class="testimonial" tabindex="0" style="min-width:100%; padding: 3rem 2.5rem 3.5rem; box-sizing: border-box; background: #084b8a; border-radius: 28px; color: #fff8c8; font-style: italic; box-shadow: 0 12px 48px rgba(251,192,45,0.7); user-select: none; margin-right: 1rem;">
+            <p>"Nopaninos has provided a wonderful start for my little one. The teachers are compassionate and the environment is truly nurturing."</p>
+            <cite>– Smita Roy</cite>
+          </article>
+          <article class="testimonial" tabindex="0" style="min-width:100%; padding: 3rem 2.5rem 3.5rem; box-sizing: border-box; background: #084b8a; border-radius: 28px; color: #fff8c8; font-style: italic; box-shadow: 0 12px 48px rgba(251,192,45,0.7); user-select: none; margin-right: 1rem;">
+            <p>"The engaging programmes and caring staff make Nopaninos the top choice for early childhood education in our community."</p>
+            <cite>– Arjun Sen</cite>
+          </article>
+          <article class="testimonial" tabindex="0" style="min-width:100%; padding: 3rem 2.5rem 3.5rem; box-sizing: border-box; background: #084b8a; border-radius: 28px; color: #fff8c8; font-style: italic; box-shadow: 0 12px 48px rgba(251,192,45,0.7); user-select: none; margin-right: 1rem;">
+            <p>"I appreciate how  Nopaninos focus on creativity and learning through play – my child loves going there every day."</p>
+            <cite>– Anjali Bose</cite>
+          </article>
+        </div>
+      </div>
+      <div class="testimonial-nav" role="tablist" aria-label="Testimonial navigation" style="text-align:center; margin-top: 1.7rem;">
+        <button role="tab" aria-selected="true" tabindex="0" aria-controls="testimonial1" onclick="showTestimonial(0)" style="background:#fdd835; border:none; color:#0277bd; font-weight:700; padding:0.65rem 1.6rem; margin:0 0.5rem; border-radius: 28px; cursor:pointer; font-size: 1.05rem; box-shadow: 0 6px 18px rgba(251,192,45,0.7); transition: background-color 0.3s ease, color 0.3s ease;">1</button>
+        <button role="tab" aria-selected="false" tabindex="-1" aria-controls="testimonial2" onclick="showTestimonial(1)" style="background:#fdd835; border:none; color:#0277bd; font-weight:700; padding:0.65rem 1.6rem; margin:0 0.5rem; border-radius: 28px; cursor:pointer; font-size: 1.05rem; box-shadow: 0 6px 18px rgba(251,192,45,0.7); transition: background-color 0.3s ease, color 0.3s ease;">2</button>
+        <button role="tab" aria-selected="false" tabindex="-1" aria-controls="testimonial3" onclick="showTestimonial(2)" style="background:#fdd835; border:none; color:#0277bd; font-weight:700; padding:0.65rem 1.6rem; margin:0 0.5rem; border-radius: 28px; cursor:pointer; font-size: 1.05rem; box-shadow: 0 6px 18px rgba(251,192,45,0.7); transition: background-color 0.3s ease, color 0.3s ease;">3</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" tabindex="-1" aria-label="Contact Kangaroo Kids Preschool">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form action="https://api.web3forms.com/submit" method="POST" class="contactForm">
+       
+        <input type="hidden" name="access_key" value="d16fffee-1cec-4940-b8ab-c0378b2785ae"
+        <label for="name">Name*</label>
+        <input type="text" id="name" name="name" required aria-required="true" placeholder="Your name" />
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required aria-required="true" placeholder="you@example.com" />
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" placeholder="Optional phone number" />
+        <label for="message">Message*</label>
+        <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Your message"></textarea>
+        <button type="submit" aria-label="Send message">Send Message</button>
+        <p id="formFeedback" role="alert" style="margin-top:1rem; font-weight:bold; color:#084b8a; display:none;"></p>
+      </form>
+      
+    </div>
+        
+  </section>
+
+  <section id="faq" class="faq" tabindex="-1" aria-label="Frequently asked questions">
+    <div class="container">
+      <h2>FAQ</h2>
+      <div class="faq-item">
+        <button aria-expanded="false" aria-controls="faq1-content" id="faq1-btn" aria-label="Toggle answer for what age groups do you accept?" aria-describedby="faq1-desc" onclick="toggleFaq(this)">
+          What age groups do you accept?
+          <span class="faq-icon material-icons" aria-hidden="true">add</span>
+        </button>
+        <div class="faq-content" id="faq1-content" role="region" aria-labelledby="faq1-btn" hidden>
+          We accept children from age 2 (Play Group) up to 6 years (Senior KG), with tailored programs for each group.
+        </div>
+        <div id="faq1-desc" class="sr-only"></div>
+      </div>
+      <div class="faq-item">
+        <button aria-expanded="false" aria-controls="faq2-content" id="faq2-btn" aria-label="Toggle answer for what are your safety measures?" aria-describedby="faq2-desc" onclick="toggleFaq(this)">
+          What are your safety measures?
+          <span class="faq-icon material-icons" aria-hidden="true">add</span>
+        </button>
+        <div class="faq-content" id="faq2-content" role="region" aria-labelledby="faq2-btn" hidden>
+          Our school follows strict safety protocols including secure premises, trained staff, daily health checks, and emergency drills.
+        </div>
+        <div id="faq2-desc" class="sr-only"></div>
+      </div>
+      <div class="faq-item">
+        <button aria-expanded="false" aria-controls="faq3-content" id="faq3-btn" aria-label="Toggle answer for do you provide meals?" aria-describedby="faq3-desc" onclick="toggleFaq(this)">
+          Do you provide meals?
+          <span class="faq-icon material-icons" aria-hidden="true">add</span>
+        </button>
+        <div class="faq-content" id="faq3-content" role="region" aria-labelledby="faq3-btn" hidden>
+          Yes, nutritious meals and snacks are provided daily with considerations for allergies and dietary restrictions.
+        </div>
+        <div id="faq3-desc" class="sr-only"></div>
+      </div>
+      <div class="faq-item">
+        <button aria-expanded="false" aria-controls="faq4-content" id="faq4-btn" aria-label="Toggle answer for how can I enroll my child?" aria-describedby="faq4-desc" onclick="toggleFaq(this)">
+          How can I enroll my child?
+          <span class="faq-icon material-icons" aria-hidden="true">add</span>
+        </button>
+        <div class="faq-content" id="faq4-content" role="region" aria-labelledby="faq4-btn" hidden>
+          Enrollment begins each January. Please get in touch via our contact form or visit us in person to complete the process.
+        </div>
+        <div id="faq4-desc" class="sr-only"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© 2025 Nopaninos. All rights reserved.</div>
+</footer>
+
+<script>
+  // Responsive hamburger menu toggle
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', toggleMenu);
+  hamburger.addEventListener('keypress', e => {
+    if(e.key === 'Enter') toggleMenu();
+  });
+  function toggleMenu() {
+    const isShown = mobileMenu.style.display === 'flex';
+    mobileMenu.style.display = isShown ? 'none' : 'flex';
+    hamburger.setAttribute('aria-pressed', !isShown);
+  }
+
+  // Smooth scroll to section
+  function scrollToSection(id) {
+    const el = document.getElementById(id);
+    if(el) {
+      el.focus({preventScroll:true});
+      window.scrollTo({top: el.offsetTop - 60, behavior: 'smooth'});
+    }
+  }
+
+  // Testimonial slider logic
+  const testimonialWrapper = document.getElementById('testimonialWrapper');
+  const testimonialButtons = document.querySelectorAll('.testimonial-nav button');
+  function showTestimonial(index) {
+    testimonialWrapper.style.transform = `translateX(-${index * 100}%)`;
+    testimonialButtons.forEach((btn, i) => {
+      btn.setAttribute('aria-selected', i === index);
+      btn.tabIndex = i === index ? 0 : -1;
+    });
+  }
+  let currentTestimonial = 0;
+  setInterval(() => {
+    currentTestimonial = (currentTestimonial + 1) % testimonialButtons.length;
+    showTestimonial(currentTestimonial);
+  }, 6000);
+  showTestimonial(0);
+
+  // Contact form validation and submission
+  const contactForm = document.getElementById('contactForm');
+  const formFeedback = document.getElementById('formFeedback');
+  contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+    formFeedback.style.display = 'none';
+    if(!contactForm.name.value.trim()) {
+      showError('Please enter your name');
+      contactForm.name.focus();
+      return;
+    }
+    if(!contactForm.email.value.trim()) {
+      showError('Please enter your email');
+      contactForm.email.focus();
+      return;
+    }
+    if(!validateEmail(contactForm.email.value.trim())) {
+      showError('Please enter a valid email');
+      contactForm.email.focus();
+      return;
+    }
+    if(!contactForm.message.value.trim()) {
+      showError('Please enter a message');
+      contactForm.message.focus();
+      return;
+    }
+    formFeedback.style.color = '#084b8a';
+    formFeedback.textContent = 'Thank you for contacting us! We will get back soon.';
+    formFeedback.style.display = 'block';
+    contactForm.reset();
+  });
+  function showError(message) {
+    formFeedback.style.color = '#d32f2f';
+    formFeedback.textContent = message;
+    formFeedback.style.display = 'block';
+  }
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  // FAQ accordion toggle
+  function toggleFaq(button) {
+    const expanded = button.getAttribute('aria-expanded') === 'true';
+    const faqItem = button.closest('.faq-item');
+    if (expanded) {
+      button.setAttribute('aria-expanded', 'false');
+      faqItem.classList.remove('expanded');
+      const content = faqItem.querySelector('.faq-content');
+      content.hidden = true;
+    } else {
+      button.setAttribute('aria-expanded', 'true');
+      faqItem.classList.add('expanded');
+      const content = faqItem.querySelector('.faq-content');
+      content.hidden = false;
+    }
+  }
+</script>
+</body>
+</html>
+
